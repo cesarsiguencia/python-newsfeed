@@ -8,11 +8,26 @@ Base.metadata.create_all(engine)
 db = Session()
 
 # insert users
-db.add_all([
-  User(username='CesarSig', email='cesar@gmail.com"', password='abcd1234'),
-  User(username='Samantha', email='sam@gmail.com"', password='1234abcd'),
-  User(username='Anna', email='anna@gmail.com', password='password'),
-])
+# db.add_all([
+#   User(username='CesarSig', email='cesar@gmail.com"', password='abcd1234'),
+#   User(username='Samantha', email='sam@gmail.com"', password='1234abcd'),
+#   User(username='Anna', email='anna@gmail.com', password='password'),
+# ])
+# db.commit()
+
+db.add(
+  User(username='CesarSig', email='cesar@gmail.com"', password='abcd1234')
+)
+db.commit()
+
+db.add(
+  User(username='Samantha', email='sam@gmail.com"', password='1234abcd')
+)
+db.commit()
+
+db.add(
+  User(username='Anna', email='anna@gmail.com', password='password')
+)
 db.commit()
 
 # insert posts

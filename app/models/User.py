@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import validates
 import bcrypt 
 
-salt = bcrypt.gensalt(10)
+salt = bcrypt.gensalt()
 
 class User(Base):
   __tablename__ = 'users'
