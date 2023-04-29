@@ -1,4 +1,4 @@
-from app.routes import home, dashboard
+from app.routes import home, dashboard, api
 
 from flask import Flask
 
@@ -23,8 +23,11 @@ def create_app(test_config=None):
     app.jinja_env.filters['format_plural'] = filters.format_plural
     
     # register routes for blueprint 
+
     app.register_blueprint(home)
     app.register_blueprint(dashboard)
+    app.register_blueprint(api)
+    
 
 
     init_db(app)
