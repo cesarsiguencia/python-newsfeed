@@ -6,6 +6,7 @@ from app.db import init_db
 
 from app.utils import filters
 
+
 def create_app(test_config=None):
     # set up createApp
     app = Flask(__name__, static_url_path='/')
@@ -29,6 +30,7 @@ def create_app(test_config=None):
     app.register_blueprint(api)
     
 
+    #let the flask app be create first before we connect to the database with the seeds
 
     init_db(app)
 
