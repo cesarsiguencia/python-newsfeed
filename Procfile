@@ -1,1 +1,1 @@
-web: gunicorn -w 4 "main.py" -t 120
+web: gunicorn main:create_app

@@ -1,10 +1,10 @@
-from app.routes import home, dashboard, api
+from routes import home, dashboard, api
 
 from flask import Flask
 
-from app.db import init_db
+from db import init_db
 
-from app.utils import filters
+from utils import filters
 
 
 def create_app(test_config=None):

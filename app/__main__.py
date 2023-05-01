@@ -1,4 +1,4 @@
-from app import create_app
+from __init__ import create_app
 import pymysql
 
 pymysql.install_as_MySQLdb()
@@ -9,4 +9,3 @@ def start_app():
 
 
 start_app()
-
