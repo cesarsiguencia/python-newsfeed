@@ -25,9 +25,9 @@ app.config.from_mapping(
 
 
 
-# @app.route('/')
-# def index():
-#     return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
+@app.route('/')
+def index():
+    return jsonify({"Choo Choo": "Welcome to your Flask app 🚅"})
 
 app.jinja_env.filters['format_url'] = filters.format_url    
 app.jinja_env.filters['format_date'] = filters.format_date
