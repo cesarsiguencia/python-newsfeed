@@ -1,9 +1,9 @@
 import sys
 from flask import Blueprint, request, jsonify, session
-from app.models import User, Post, Comment, Vote
-from app.db import get_db
+from models import User, Post, Comment, Vote
+from db import get_db
 bp = Blueprint('api', __name__, url_prefix='/api')
-from app.utils.auth import login_required
+from utils.auth import login_required
 
 @bp.route('/users', methods=['POST'])
 def signup():
