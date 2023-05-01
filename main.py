@@ -40,7 +40,7 @@ app.register_blueprint(dashboard)
 app.register_blueprint(api)
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
 #let the flask app be create first before we connect to the database with the seeds
