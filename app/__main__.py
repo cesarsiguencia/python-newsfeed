@@ -3,9 +3,4 @@ import pymysql
 
 pymysql.install_as_MySQLdb()
 
-def start_app():
-    create_app()
-
-
-
-start_app()
+create_app()
