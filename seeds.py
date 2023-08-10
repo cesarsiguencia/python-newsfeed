@@ -53,10 +53,12 @@ db.commit()
 # insert votes
 db.add_all([
   Vote(user_id=1, post_id=2),
-  Vote(user_id=1, post_id=4),
+  Vote(user_id=2, post_id=1),
+  Vote(user_id=2, post_id=3),
+  Vote(user_id=3, post_id=3),
+  Vote(user_id=1, post_id=5),
+  Vote(user_id=2, post_id=5),
   Vote(user_id=2, post_id=4),
-  Vote(user_id=3, post_id=4),
-  Vote(user_id=3, post_id=2)
 ])
 db.commit()
 
