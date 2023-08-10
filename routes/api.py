@@ -10,7 +10,6 @@ def signup():
   data = request.get_json()
   db = get_db()
   try:
-    # attempt creating a new user
     newUser = User(
       username = data['username'],
       email = data['email'],
@@ -20,9 +19,7 @@ def signup():
     db.commit()
   except:
     print(sys.exe_info()[0])
-    # insert failed, so rollback and send error to front end
     db.rollback()
-    # insert failed, so send error to front end
     return jsonify(message = 'Signup failed'), 500
   
   session.clear()
@@ -32,7 +29,6 @@ def signup():
 
 @bp.route('/users/logout', methods=['POST'])
 def logout():
-  # remove session variables
   session.clear()
   return '', 204
 
@@ -55,7 +51,7 @@ def login():
   session['loggedIn'] = True
   return jsonify(id = user.id)
 
-# comment routes
+
 
 @bp.route('/comments', methods=['POST'])
 @login_required
@@ -64,7 +60,6 @@ def comment():
   db = get_db()
 
   try:
-  # create a new comment
     newComment = Comment(
       comment_text = data['comment_text'],
       post_id = data['post_id'],
@@ -87,7 +82,6 @@ def upvote():
   db = get_db()
 
   try:
-    # create a new vote with incoming id and session id
     newVote = Vote(
       post_id = data['post_id'],
       user_id = session.get('user_id')
@@ -109,7 +103,6 @@ def create():
   data = request.get_json()
   db = get_db()
   try:
-    # create a new post
     newPost = Post(
       title = data['title'],
       post_url = data['post_url'],
@@ -145,7 +138,6 @@ def update(id):
 def delete(id):
   db = get_db()
   try:
-    # delete post from db
     db.delete(db.query(Post).filter(Post.id == id).one())
     db.commit()
   except:

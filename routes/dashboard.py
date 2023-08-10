@@ -25,10 +25,8 @@ def dash():
 @bp.route('/edit/<id>')
 @login_required
 def edit(id):
-  # get single post by id
   db = get_db()
   post = db.query(Post).filter(Post.id == id).one()
-  # render edit page
   return render_template(
     'edit-post.html',
     post=post,
