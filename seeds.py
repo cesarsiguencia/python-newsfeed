@@ -32,21 +32,21 @@ db.commit()
 
 # insert posts
 db.add_all([
-  Post(title='Donec posuere metus vitae ipsum', post_url='https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png', user_id=1),
-  Post(title='Morbi non quam nec dui luctus rutrum', post_url='https://nasa.gov/donec.json', user_id=1),
-  Post(title='Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue', post_url='https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx', user_id=2),
-  Post(title='Nunc purus', post_url='http://desdev.cn/enim/blandit/mi.jpg', user_id=3),
-  Post(title='Pellentesque eget nunc', post_url='http://google.ca/nam/nulla/integer.aspx', user_id=2)
+  Post(title="My first post", post_url="https://www.apple.com/", user_id=1),
+  Post(title="Her first post", post_url="https://www.youtube.com/", user_id=2),
+  Post(title='Please checkout my portfolio', post_url="https://cesarsiguencia.github.io/my-react-portfolio/", user_id=1),
+  Post(title='Anyone know React well and can help me?', post_url='https://www.reactenlightenment.com/', user_id=3),
+  Post(title='Some technical interview advice I found!', post_url='https://perscholas.org/news/how-to-land-your-first-job-in-tech-resume-and-interview-tips/?utm_source=google&utm_medium=ad_grant&utm_campaign=blog&utm_term=interviewing%20tips&utm_campaign=Per+Scholas:+Awareness&utm_source=adwords&utm_medium=ppc&hsa_acc=7812736465&hsa_cam=16572465740&hsa_grp=132888643365&hsa_ad=587608286116&hsa_src=g&hsa_tgt=kwd-21418711&hsa_kw=interviewing%20tips&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwldKmBhCCARIsAP-0rfzCJFHtxWKUzBMJ5vuhLeklfhKjXfCysjyLlJ7DOp5QW1mscQ-nNVYaAuSnEALw_wcB', user_id=2)
 ])
 db.commit()
 
 # insert comments
 db.add_all([
-  Comment(comment_text='Nunc rhoncus dui vel sem.', user_id=1, post_id=2),
-  Comment(comment_text='Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.', user_id=1, post_id=3),
-  Comment(comment_text='Aliquam erat volutpat. In congue.', user_id=2, post_id=1),
-  Comment(comment_text='Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', user_id=2, post_id=3),
-  Comment(comment_text='In hac habitasse platea dictumst.', user_id=3, post_id=3)
+  Comment(comment_text="Congratulations on your first post!", user_id=2, post_id=1),
+  Comment(comment_text="Jealous of your portfolio! :)", user_id=2, post_id=3),
+  Comment(comment_text="Teach me how to do this!", user_id=3, post_id=3),
+  Comment(comment_text='I can help! Message me', user_id=1, post_id=4),
+  Comment(comment_text='Thanks for sharing this!', user_id=2, post_id=5)
 ])
 db.commit()
 
