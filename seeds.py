@@ -20,7 +20,7 @@ db.add_all([
   Post(title="Fancing new tech coming out soon!", post_url="https://www.macrumors.com/", user_id=2),
   Post(title='Please checkout my portfolio', post_url="https://cesarsiguencia.github.io/my-react-portfolio/", user_id=1),
   Post(title='Anyone know React well and can help me?', post_url='https://www.reactenlightenment.com/', user_id=3),
-  Post(title='Some technical interview advice I found!', post_url='https://perscholas.org/news/how-to-land-your-first-job-in-tech-resume-and-interview-tips/?utm_source=google&utm_medium=ad_grant&utm_campaign=blog&utm_term=interviewing%20tips&utm_campaign=Per+Scholas:+Awareness&utm_source=adwords&utm_medium=ppc&hsa_acc=7812736465&hsa_cam=16572465740&hsa_grp=132888643365&hsa_ad=587608286116&hsa_src=g&hsa_tgt=kwd-21418711&hsa_kw=interviewing%20tips&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwldKmBhCCARIsAP-0rfzCJFHtxWKUzBMJ5vuhLeklfhKjXfCysjyLlJ7DOp5QW1mscQ-nNVYaAuSnEALw_wcB', user_id=2)
+  Post(title='Some technical interview advice I found!', post_url='https://learntocodewith.me/posts/technical-interview/', user_id=2)
 ])
 db.commit()
 
