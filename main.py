@@ -31,7 +31,7 @@ app.register_blueprint(dashboard)
 app.register_blueprint(api)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=4999, debug=True)
+    app.run( port=4999, debug=True)
 
 init_db(app)
 
