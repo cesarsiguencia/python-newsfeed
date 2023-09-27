@@ -28,7 +28,7 @@ To create your own copy of this application instead of using the link, please ch
 * Bcrypt
 * Dotenv
 * Gunicorn
-* HTML
+* JavaScript
 
 ### Tables/Models in Database
 * Users
