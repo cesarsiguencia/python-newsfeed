@@ -10,10 +10,65 @@
 </head>
 
 <body>
+
+
+
+
+
+
+
   <div class="wrapper">
+    <div class="modal" id="trial-modal">
+
+      <form class="container" style="text-align: center">
+          <h3>
+              Welcome to Technify in Python!
+          </h3>
+    
+          <p>Watch the less than 2 minute demo before previewing app!</p>
+    
+          <br />
+    
+          <div class="videoWrapper">
+              <!-- Copy & Pasted from YouTube -->
+              <iframe width="560" height="349"
+                  src="https://drive.google.com/file/d/1dgE4WgaUUo373DLhJAB0Ok5GjlZZDOFY/preview" frameborder="0"
+                  allowfullscreen></iframe>
+          </div>
+    
+          <div style="text-align:left;">
+              <p><strong>Keep In Mind:</strong></p>
+              <p><span> - Click on the title of this app to return to this demo at anytime.</span></p>
+              <p> - The developer may and has every right to delete any new data added to this site by visitors at
+                  random.
+              </p>
+    
+    
+              <div>
+                  <div>
+                      <img class='user-icon' src='/stylesheets/user.png'>
+                      </img>
+                  </div>
+                  <p><span> - BE ON THE LOOK OUT FOR THIS ICON, which will give you SAMPLE
+                          CREDENTIALS where needed if you do not wish to create an entire new client profile.</span>
+                  </p>
+    
+    
+              </div>
+    
+              <br />
+    
+              <button type="button" class="highlighted-options text-center margin-center" id="close-trial">
+                  <p>
+                      I have watched the demo and understand how to use the full app
+                  </p>
+              </button>
+          </div>
+      </form>
+    </div>
     <header>
       <h1>
-        <a href="/">Technify: Enjoy the Latest News and Developer Chats</a>
+        <a id="title" href="/">Technify: Enjoy the Latest News and Developer Chats</a>
       </h1>
       <nav>
         {% if loggedIn == True %}
@@ -27,10 +82,41 @@
     <main>
       {% block body %}{% endblock %}
     </main>
-    <footer>
-      Developed by César Siguencia, 2023
-    </footer>
+    
   </div>
+
+  <footer class="page-footer font-small blue pt-4">
+    <div>Developed by César Siguencia, Copyright ©2023, All rights reserved
+    </div>
+
+
+        <div class="row">
+      
+
+
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5>NotableLinks</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://github.com/cesarsiguencia" target="_blank"><img class='footer-icons' src="/stylesheets/github.svg" alt='github logo'></img></a></li>
+
+                    <li><a href="https://www.linkedin.com/in/cesar-siguencia/" target="_blank"><img class='footer-icons' src="/stylesheets/linkedin.png" alt='linkedIn logo'></img></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-md-0 mb-3">
+                <h5>Links and Projects</h5>
+                <ul class="list-unstyled">
+                    <li><a target="_blank" class='footer-links' href="https://cesarsiguencia.github.io/my-react-portfolio/">My Portfolio</a></li>
+                    <li><a target="_blank" class='footer-links'href="https://cs-10000-days-33ee2045b3a6.herokuapp.com/">10000 Days</a></li>
+                    <li><a target="_blank" class='footer-links' href="https://www.apple.com/">Apple Website</a></li>
+                </ul>
+            </div>
+  
+    </div>
+
+
+
+</footer>
   
   {% if loggedIn %}
   <script src="/javascript/logout.js"></script>

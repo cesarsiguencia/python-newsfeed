@@ -5,6 +5,14 @@ This social media app is a python version of my node.js project Just Tech News, 
 Original Node.js project github here:
 https://github.com/cesarsiguencia/just-tech-news 
 
+### Credentials
+Sample the application using these test credentials.
+- Username: testbot@gmail.com 
+- Password: password
+
+### Link
+https://technify-by-cs.up.railway.app/
+
 * Login using their email and password used at the time of signing up
 * Create posts
 * Comment on any posts
@@ -35,9 +43,6 @@ To create your own copy of this application instead of using the link, please ch
 * Posts
 * Comments
 * Votes
-
-### Link
-https://technify-by-cs.up.railway.app/
 
 Installation to Local Drive with Accompanying Data (Seeds)
 1. Git clone or download the application and load on VSCode

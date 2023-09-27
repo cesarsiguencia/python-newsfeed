@@ -2,33 +2,47 @@
 
 {% block body %}
 <form class="login-form">
-  <div>
+  <div class="creds">
+      <img class='icon' src="/stylesheets/user.png" ></img>
+      <p><strong>Use the sample credentials below!</strong></p>
+      <img class='creds-img' src="/stylesheets/creds.png"></img>
+      <p><strong>- - - - -</strong></p>
+      <p><strong>Or create a new account quickly through sign up</strong></p>
+
+  </div>
+
+
+  <div class="type-blocks">
     <label for="email-login">email:</label>
     <input type="text" id="email-login" />
   </div>
-  <div>
+  <div class="type-blocks">
     <label for="password-login">password:</label>
     <input type="password" id="password-login" />
   </div>
-  <div>
+  <div class="type-blocks">
     <button type="submit">login</button>
   </div>
+
+
 </form>
 
+<br/>
+
 <form class="signup-form">
-  <div>
+  <div class="type-blocks">
     <label for="username-signup">username:</label>
     <input type="text" id="username-signup" />
   </div>
-  <div>
+  <div class="type-blocks">
     <label for="email-signup">email:</label>
     <input type="text" id="email-signup" />
   </div>
-  <div>
+  <div class="type-blocks">
     <label for="password-signup">password:</label>
     <input type="password" id="password-signup" />
   </div>
-  <div>
+  <div class="type-blocks">
     <button type="submit">signup</button>
   </div>
 </form>

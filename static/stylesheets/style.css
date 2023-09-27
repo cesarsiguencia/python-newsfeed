@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
+  
 }
 
-body, html {
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -21,7 +23,7 @@ a:hover {
   color: #3486eb;
 }
 
-button {
+button {list-style-position: outside; /* or 'inside' */
   background-color: #225ca3;
   border: 0;
   padding: 1%;
@@ -36,18 +38,25 @@ button:hover {
   background-color: #3486eb;
 }
 
+.list-block{
+  width: 100%;
+}
+
 .post-list {
   margin: 0;
   padding: 0;
+  list-style-position: outside; /* or 'inside' */
 }
 
-textarea, input {
+textarea,
+input {
   padding: .5%;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -57,7 +66,7 @@ textarea {
   min-height: 100px;
 }
 
-form > div {
+form>div {
   margin-bottom: 2%;
 }
 
@@ -66,13 +75,15 @@ form label {
 }
 
 .wrapper {
-  width: 100%;
-  min-height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  height:100vh;
   display: flex;
   flex-direction: column;
 }
+
+.wrapper-sub{
+  max-width: 1200px;
+  margin: 0 auto;
+} 
 
 header {
   border-bottom: 1px solid #ccc;
@@ -170,9 +181,131 @@ main {
 }
 
 footer {
-  border-top: 1px solid #ccc;
-  display: flex;
+  background-color: #ccc;
+  text-align: center;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+  width: 100%;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around
+  
+}
+
+.footer-icons{
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}
+
+.footer-icons:hover{
+  background-color: white;
+}
+
+.list-unstyled{
+  list-style: none;
+  justify-content: center;
+  padding: 0 0
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.9);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  height: 0px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  color: white;
+  text-align: center;
+  width: 90%;
+  margin: 15px auto
+}
+
+.user-icon{
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+#close-trial{
+  width: 100%;
+  font-size: 18px;
+  padding: 3px 5px;
+}
+
+.creds{
+  background-color: orange;
+  padding: 5px 5px;
+  width: 250px;
+  text-align: center;
+
+}
+
+.creds-img{
+  width: 200px;
+}
+
+.icon{
+  width: 100px;
+  height: 100px
+}
+
+@media screen and (max-width: 550px){
+  .login-form>*{
+    margin: 0 auto;
+  }
+
+  .type-blocks> *{
+    display: inline-block;
+    width: 100%;
+    
+  }
+
+  .type-blocks input{
+    padding: 10px 0;
+    margin: 5px 0
+    
+  }
+
+  button{
+    padding: 10px 10px
+  }
+
+  .new-post-form input {
+    width: 100%;
+  }
+
+  nav{
+    display: flex;
+    align-items: right;
+  }
+
+  .post-list > li{
+    display: inline-block;
+    width: 90%;
+    margin: 15px auto
+  }
 }

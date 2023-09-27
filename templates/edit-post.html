@@ -6,8 +6,8 @@
   <h2>
     Edit Post
   </h2>
-  <form class="edit-post-form">
-    <div>
+  <form class="edit-post-form ">
+    <div class="type-blocks">
       <input name="post-title" type="text" value="{{post.title}}" />
       <span>({{post.post_url | format_url }})</span>
     </div>
@@ -22,11 +22,11 @@
 </article>
 
 <form class="comment-form">
-  <div>
+  <div class="type-blocks">
     <textarea name="comment-body"></textarea>
   </div>
 
-  <div>
+  <div class="type-blocks">
     <button type="submit">add comment</button>
   </div>
 </form>
